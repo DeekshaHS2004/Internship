@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced HTML Forms</title>
+</head>
+<body>
+
+<h1>Advanced Forms (Only HTML)</h1>
+
+<!-- ================= LOGIN FORM ================= -->
+<fieldset>
+    <legend><strong>Login</strong></legend>
+
+    <form action="#" method="post">
+        <label>Email:</label><br>
+        <input type="email" name="login_email" required placeholder="example@gmail.com"><br><br>
+
+        <label>Password:</label><br>
+        <input type="password" name="login_password" required minlength="6" placeholder="Min 6 characters"><br><br>
+
+        <input type="submit" value="Login">
+        <input type="reset" value="Clear">
+    </form>
+</fieldset>
+
+<br><br>
+
+<!-- ================= SIGNUP FORM ================= -->
+<fieldset>
+    <legend><strong>Signup</strong></legend>
+
+    <form action="#" method="post">
+
+        <label>Full Name:</label><br>
+        <input type="text" name="fullname" required pattern="[A-Za-z ]{3,}" placeholder="Only letters, min 3 chars"><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>Phone Number:</label><br>
+        <input type="tel" name="phone" required pattern="[0-9]{10}" placeholder="10 digit number"><br><br>
+
+        <label>Date of Birth:</label><br>
+        <input type="date" name="dob" required><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="male" required> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other
+        <br><br>
+
+        <label>Country:</label><br>
+        <select name="country" required>
+            <option value="">-- Select Country --</option>
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+            <option value="other">Other</option>
+        </select>
+        <br><br>
+
+        <label>Skills:</label><br>
+        <input type="checkbox" name="skills" value="html"> HTML
+        <input type="checkbox" name="skills" value="css"> CSS
+        <input type="checkbox" name="skills" value="js"> JavaScript
+        <input type="checkbox" name="skills" value="java"> Java
+        <br><br>
+
+        <label>Username:</label><br>
+        <input type="text" name="username" required minlength="4" maxlength="12"><br><br>
+
+        <label>Password:</label><br>
+        <input type="password" name="password" required minlength="6"><br><br>
+
+        <label>Confirm Password:</label><br>
+        <input type="password" name="confirm_password" required minlength="6"><br><br>
+
+        <label>Upload Profile Photo:</label><br>
+        <input type="file" name="photo" accept="image/*"><br><br>
+
+        <label>Website:</label><br>
+        <input type="url" name="website" placeholder="https://example.com"><br><br>
+
+        <label>Favourite Color:</label><br>
+        <input type="color" name="favcolor"><br><br>
+
+        <label>Experience Level (0 to 10):</label><br>
+        <input type="range" name="experience" min="0" max="10"><br><br>
+
+        <label>Preferred Role:</label><br>
+        <input list="roles" name="role" placeholder="Choose or type">
+        <datalist id="roles">
+            <option value="Frontend Developer">
+            <option value="Backend Developer">
+            <option value="Full Stack Developer">
+            <option value="Data Analyst">
+        </datalist>
+        <br><br>
+
+        <label>About You:</label><br>
+        <textarea name="about" rows="4" cols="40" placeholder="Write something about yourself..."></textarea>
+        <br><br>
+
+        <input type="checkbox" name="terms" required> I agree to the Terms & Conditions
+        <br><br>
+
+        <input type="submit" value="Create Account">
+        <input type="reset" value="Reset Form">
+
+    </form>
+</fieldset>
+
+</body>
+</html>
